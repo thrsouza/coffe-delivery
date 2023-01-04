@@ -4,6 +4,8 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   width: 100%;
   padding: 0 1rem;
+  position: fixed;
+  background-color: ${(props) => props.theme.gray100};
 `
 
 export const HeaderContent = styled.div`
@@ -12,9 +14,9 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
 
   width: 100%;
+  height: 6.5rem;
   max-width: 70rem;
   margin: 0 auto;
-  padding: 2rem 0;
 
   img {
     height: 2.5rem;
