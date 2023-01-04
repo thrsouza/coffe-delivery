@@ -28,3 +28,10 @@ export const Subtitle = styled.span`
   font-size: 1.25rem;
   margin-top: 1rem;
 `
+
+export const Advantages = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1.25rem 2.5rem;
+  margin-top: 4rem;
+`
