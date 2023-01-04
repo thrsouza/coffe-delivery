@@ -65,13 +65,14 @@ export const Price = styled.h3`
   display: flex;
   align-items: flex-end;
   gap: 0.25rem;
+  line-height: 0;
 
   &::before {
     content: 'R$';
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
-    line-height: 2;
+    line-height: 0;
   }
 `
 
