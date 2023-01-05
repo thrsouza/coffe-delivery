@@ -8,6 +8,8 @@ import {
 } from './styles'
 
 export function Header() {
+  const cartItemsAmount = 3
+
   return (
     <HeaderContainer>
       <HeaderContent>
@@ -19,7 +21,11 @@ export function Header() {
             <MapPin size={22} weight="fill" />
             Porto Alegre, RS
           </LocationInfo>
-          <CheckoutLink to="/checkout" title="Checkout">
+          <CheckoutLink
+            to="/checkout"
+            title="Checkout"
+            cartItemsAmount={cartItemsAmount}
+          >
             <ShoppingCart size={22} weight="fill" />
           </CheckoutLink>
         </div>

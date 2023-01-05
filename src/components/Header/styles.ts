@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import { NavLink, NavLinkProps } from 'react-router-dom'
+import styled, { css } from 'styled-components'
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -45,14 +45,46 @@ export const LocationInfo = styled.span`
   }
 `
 
-export const CheckoutLink = styled(NavLink)`
+interface CheckoutLinkProps extends NavLinkProps {
+  cartItemsAmount: number
+}
+
+// eslint-disable-next-line prettier/prettier
+export const CheckoutLink = styled(NavLink) <CheckoutLinkProps>`
   display: flex;
   align-items: center;
   justify-content: center;
 
   padding: 0.5rem;
   border-radius: 8px;
+  position: relative;
 
   background: ${(props) => props.theme.yellow300};
   color: ${(props) => props.theme.yellow700};
+
+  ${(props) =>
+    props.cartItemsAmount > -1 &&
+    css`
+      &::after {
+        content: '${props.cartItemsAmount}';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 0.75rem;
+        font-weight: bold;
+        line-height: 0;
+        border-radius: 50%;
+
+        width: 1.25rem;
+        height: 1.25rem;
+
+        position: absolute;
+        right: -0.5rem;
+        top: -0.5rem;
+
+        color: ${(props) => props.theme.gray100};
+        background: ${props.theme.yellow700};
+      }
+    `}
 `
