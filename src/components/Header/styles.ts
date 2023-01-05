@@ -29,6 +29,12 @@ export const HeaderContent = styled.div`
   }
 `
 
+export const BrandLink = styled(NavLink)`
+  display: flex;
+  padding: 0.125rem;
+  border-radius: 6px;
+`
+
 export const LocationInfo = styled.span`
   display: flex;
   align-items: center;
@@ -39,6 +45,8 @@ export const LocationInfo = styled.span`
   font-size: 0.875rem;
   background: ${(props) => props.theme.purple300};
   color: ${(props) => props.theme.purple700};
+
+  cursor: not-allowed;
 
   svg {
     color: ${(props) => props.theme.purple500};
@@ -61,6 +69,8 @@ export const CheckoutLink = styled(NavLink) <CheckoutLinkProps>`
 
   background: ${(props) => props.theme.yellow300};
   color: ${(props) => props.theme.yellow700};
+
+  cursor: pointer;
 
   ${(props) =>
     props.cartItemsAmount > -1 &&

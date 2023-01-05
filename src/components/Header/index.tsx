@@ -1,6 +1,7 @@
 import { MapPin, ShoppingCart } from 'phosphor-react'
-import { NavLink } from 'react-router-dom'
+
 import {
+  BrandLink,
   CheckoutLink,
   HeaderContainer,
   HeaderContent,
@@ -13,9 +14,9 @@ export function Header() {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <NavLink to="/" title="Página inicial">
+        <BrandLink to="/" title="Página inicial">
           <img src="/assets/images/logo.svg" alt="" />
-        </NavLink>
+        </BrandLink>
         <div>
           <LocationInfo>
             <MapPin size={22} weight="fill" />
