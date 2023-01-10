@@ -25,7 +25,7 @@ export function Header() {
           <CheckoutLink
             to="/checkout"
             title="Checkout"
-            cartItemsAmount={cartItemsAmount}
+            amount={cartItemsAmount}
           >
             <ShoppingCart size={22} weight="fill" />
           </CheckoutLink>

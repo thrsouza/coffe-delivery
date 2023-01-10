@@ -1,4 +1,4 @@
-import { NavLink, NavLinkProps } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 export const HeaderContainer = styled.header`
@@ -53,8 +53,8 @@ export const LocationInfo = styled.span`
   }
 `
 
-interface CheckoutLinkProps extends NavLinkProps {
-  cartItemsAmount: number
+interface CheckoutLinkProps {
+  amount: number
 }
 
 // eslint-disable-next-line prettier/prettier
@@ -73,10 +73,10 @@ export const CheckoutLink = styled(NavLink) <CheckoutLinkProps>`
   cursor: pointer;
 
   ${(props) =>
-    props.cartItemsAmount > -1 &&
+    props.amount > -1 &&
     css`
       &::after {
-        content: '${props.cartItemsAmount}';
+        content: '${props.amount}';
         display: flex;
         align-items: center;
         justify-content: center;

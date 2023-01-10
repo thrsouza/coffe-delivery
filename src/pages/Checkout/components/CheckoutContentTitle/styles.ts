@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-export const TitleBoxContainer = styled.div`
+export const CheckoutContentTitleContainer = styled.div`
   display: grid;
   grid-template-columns: 22px auto;
   grid-column-gap: 8px;
+  margin-bottom: 2rem;
 
   > div {
     display: flex;
